@@ -9,11 +9,11 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 
 @Documented
-@Constraint(validatedBy = EmailValidator.class)
+@Constraint(validatedBy = PhoneNumberValidator.class)
 @Target({ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ValidEmail {
-    String message() default "Incorrectly formed email address. Please enter valid email.";
+public @interface ValidPhoneNumber {
+    String message() default "Please enter valid phone number.";
 
     Class<?>[] groups() default {};
 

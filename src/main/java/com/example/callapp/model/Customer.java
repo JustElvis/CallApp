@@ -1,6 +1,5 @@
 package com.example.callapp.model;
 
-import com.example.callapp.lib.ValidEmail;
 import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +18,6 @@ public class Customer {
     private String firstName;
     private String lastName;
     private String phoneNumber;
-    @ValidEmail
     private String email;
     private String app;
     private LocalDateTime dateTime;
