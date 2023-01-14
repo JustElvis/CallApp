@@ -1,6 +1,7 @@
 package com.example.callapp.service.mapper;
 
 import com.example.callapp.dto.CustomerRequestDto;
+import com.example.callapp.dto.CustomerResponseDto;
 import com.example.callapp.model.Customer;
 import org.springframework.stereotype.Component;
 
@@ -15,5 +16,17 @@ public class CustomerMapper {
         customer.setApp(customerRequestDto.getApp());
         customer.setDateTime(customerRequestDto.getDateTime());
         return customer;
+    }
+
+    public CustomerResponseDto mapToDto(Customer customer) {
+        CustomerResponseDto responseDto = new CustomerResponseDto();
+        responseDto.setId(customer.getId());
+        responseDto.setFirstName(customer.getFirstName());
+        responseDto.setLastName(customer.getLastName());
+        responseDto.setPhoneNumber(customer.getPhoneNumber());
+        responseDto.setEmail(customer.getEmail());
+        responseDto.setApp(customer.getApp());
+        responseDto.setDateTime(customer.getDateTime());
+        return responseDto;
     }
 }
